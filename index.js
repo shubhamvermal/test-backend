@@ -21,11 +21,13 @@ app.use('/api/user', userController);
 app.all(
     '/',
     function (req, res) {
-        return res.json({
-            status: true,
-            name: 'shubham',
-            message: 'good night'
-        })
+
+        return res.send('hello world');
+        // return res.json({
+        //     status: true,
+        //     name: 'shubham',
+        //     message: 'good night'
+        // })
     }
 );
 
