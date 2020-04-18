@@ -3,7 +3,8 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 const assert = require('assert');
 
-const db_url = process.env.DB_URL;
+// const db_url = process.env.DB_URL; ////127.0.0.1:27017/mongo_test 
+const db_url = "mongodb:mongodb+srv://shubham:$@Mlr201999@shubham-test-trzmg.mongodb.net/test?retryWrites=true&w=majority"
 
 // CONNECTION CODE
 mongoose.connect(
@@ -15,7 +16,7 @@ mongoose.connect(
         useFindAndModify: true
     },
     function (err, link) {
-        //check err
+        //check errF
         assert.equal(err, null, 'DB CONNECTION FAILED');
 
         //ok
