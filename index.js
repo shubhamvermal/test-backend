@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const cors = require('cors');
 const database = require('./database')
 const userController = require('./controllers/user')
-const serverless = require('serverless-http');
 // const morgan = require('morgan');
 // const morgan = require('morgan');
 
@@ -37,4 +36,3 @@ app.listen(
     }
 )
 
-module.exports.handler = serverless(app)
