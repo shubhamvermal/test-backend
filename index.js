@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const database = require('./database')
 const userController = require('./controllers/user')
-// const morgan = require('morgan');
+const serverless = require('serverless-http');
 // const morgan = require('morgan');
 // const morgan = require('morgan');
 
@@ -36,3 +36,5 @@ app.listen(
         console.log('listen at ===> ', port)
     }
 )
+
+module.exports.handler = serverless(app)

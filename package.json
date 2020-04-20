@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
+    "start": "nodemon",
+    "netlify": "./node_modules/.bin/netlify-lambda serve index.js",
+    "netlifyBuild": "./node_modules/.bin/netlify-lambda build index.js"
   },
   "keywords": [
     "express",
@@ -23,7 +25,9 @@
     "express-validator": "^6.4.0",
     "mongodb": "^3.5.6",
     "mongoose": "^5.9.9",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "netlify-lambda": "^1.6.3",
+    "serverless-http": "^2.3.2"
   },
   "devDependencies": {}
 }
