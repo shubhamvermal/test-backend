@@ -18,7 +18,7 @@ app.use(morgan('dev'))
 app.use(cors())
 app.use('/api/user', userController);
 app.all(
-    '/',
+    '*',
     function (req, res) {
 
         return res.json({
